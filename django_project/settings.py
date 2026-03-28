@@ -96,7 +96,7 @@ CLOUDINARY_STORAGE = {
     'API_SECRET': 'QA3k5d9quZ9v7Wo0m5SSwWELvfM',
 }
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
