@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',    # Users app
     'crispy_forms',
     'crispy_bootstrap5',
+    'cloudinary',
+    'cloudinary_storage',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -88,6 +90,13 @@ DATABASES = {
     }
 }
 
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dsib5ilg9',
+    'API_KEY': '537143648889987',
+    'API_SECRET': 'QA3k5d9quZ9v7Wo0m5SSwWELvfM',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
@@ -125,10 +134,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
 
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
